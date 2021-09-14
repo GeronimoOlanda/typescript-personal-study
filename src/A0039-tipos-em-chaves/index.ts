@@ -1,6 +1,6 @@
 type Veiculo = {
   marca: string;
-  ano: string;
+  ano: number;
 };
 
 type Car = {
@@ -11,7 +11,7 @@ type Car = {
 
 const carro: Car = {
   brand: 'Ford',
-  year: '2019',
+  year: 2019,
   name: 'Diferenciado',
 };
 
