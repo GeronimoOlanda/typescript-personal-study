@@ -9,6 +9,12 @@ type Car = {
   name: string;
 };
 
+type Family = {
+  name: string;
+  lastName: string;
+  totalElements: number;
+  newInformations: Array<string>;
+};
 const carro: Car = {
   brand: 'Ford',
   year: 2019,
@@ -16,3 +22,14 @@ const carro: Car = {
 };
 
 console.log(carro);
+
+const familia: Family = {
+  name: 'Thalia',
+  lastName: 'Aparecida',
+  totalElements: 21,
+  newInformations: ['Maria', 'José', 'Parents'],
+};
+
+for (const family in familia) {
+  console.log(`${family} = ${familia[family]}`);
+}
