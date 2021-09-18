@@ -8,6 +8,11 @@ type Pessoa1 = {
   salario: number;
   corPreferida?: string;
 };
+type Carro1 = {
+  nome: string;
+  modelo: string;
+  marca: string;
+};
 type CorRGB = 'Vermelha' | 'Verde' | 'Azul';
 type CorCMYK = 'Ciano' | 'Magento' | 'Amarelo' | 'Preto';
 type CorPreferida = CorRGB | CorCMYK;
@@ -23,4 +28,7 @@ export function setCorPreferida(pessoa: Pessoa1, cor: CorPreferida): Pessoa1 {
   return { ...pessoa, corPreferida: cor };
 }
 
+export function setCarro(carro: Carro1): Carro1 {
+  return { ...carro };
+}
 console.log(setCorPreferida(pessoa, 'Azul'));
