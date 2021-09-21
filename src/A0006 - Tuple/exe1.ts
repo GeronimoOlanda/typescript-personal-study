@@ -1,6 +1,10 @@
 const dadosCliente1: [number, string] = [1, 'Geronimo'];
 const dadosCliente2: [number, string, string?] = [1, 'Geronimo', 'Thalia'];
-
+const dadosFUncionarios: [string, string, string] = [
+  'Maria',
+  'Recursos Humanos',
+  'Codigo 3211',
+];
 dadosCliente1[0] = 23;
 dadosCliente1[1] = 'Thalia e Geronimo Casados para sempre, amém!';
 
