@@ -32,6 +32,7 @@ const subCal = new SubCalculator(10);
 console.log(subCal.add1(10).mult1(2).div1(2).pow(2));
 
 //Builder - GoF
+//padrao de projeto construtor
 export class RequestBuilder {
   private method: 'get' | 'post' | null = null;
   private url: string | null = null;
@@ -41,8 +42,14 @@ export class RequestBuilder {
     return this;
   }
 
-  setUrl(url: 'get' | 'post'): this {
+  setUrl(url: string): this {
     this.url = url;
     return this;
   }
+  send(): void {
+    console.log(`Enviando dados via ${this.method} para ${this.url}`);
+  }
 }
+
+const request = new RequestBuilder(); //Builder
+request.setUrl('http://google.com').setMethod('post').send(); // utilizando tudo na  mesma linha
